@@ -4,9 +4,11 @@ $(document).ready(function() {
 
   $.ajax(url).then(function(response) {
     for (var i = 0; i < response.Search.length; i++) {
-      var movie = $("<li>");
-      movie.text(response.Search[i].Title);
-      $("#movie-list").append(movie);
+      if (response.Search[i].Type === 'movie') {
+        var movie = $("<li>");
+        movie.text(response.Search[i].Title + " (" + response.Search[i].Year + ")");
+        $("#movie-list").append(movie);
+      }
     }
   });
 });
