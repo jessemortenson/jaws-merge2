@@ -1,8 +1,8 @@
 function animateRight() {
-  $("#shark-icon").animate({ marginLeft: "500"}, 1000, animateLeft);
+  $("#shark-icon").animate({ marginRight: "300"}, 1000, animateLeft);
 }
 function animateLeft() {
-  $("#shark-icon").animate({ marginLeft: "0"}, 1000, animateRight);
+  $("#shark-icon").animate({ marginRight: "0"}, 1000, animateRight);
 }
 
 $(document).ready(function() {
